@@ -16,7 +16,7 @@ using System.Collections.Specialized;
         public SerilogExceptionLogger()
         {
             Serilog.Log.Logger = new LoggerConfiguration()
-                .ReadAppSettings()
+                .ReadFrom.AppSettings()
                 .Enrich.WithMachineName()
                 .CreateLogger();
         }
